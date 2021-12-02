@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Page 1</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  
+  <body>
+    <div class="grid">
+      <header class="box header">
+        <h1>Assignment 2</h1>
+      </header>
+      
+      <nav class="box nav">
+        <ul>
+          <li class="li"><a href="index.html" title="Home">Home</a></li>
+          <li class="li"><a href="page1.html" title="Page 1">Page 1</a></li>
+          <li class="li"><a href="page2.html" title="Page 2">Page 2</a></li>
+          <li class="li"><a href="page3.html" title="Page 3">Page 3</a></li>
+          <li class="li"><a href="https://www.columbusstate.edu/" title="Columbus State University">CSU</a></li>
+        </ul>
+      </nav>
+      
+      <main class="box main">
+        <p>Please fill out the following form.</P><br>
+        <form action="https://webdevbasics.net/scripts/yoga.php" method="POST" onsubmit="return checkPassword(this)">
+          <div>
+            <label for="firstname">First Name (4 to 10 characters):</label><br>
+            <input type="text" id="firstname" name="firstname" minlength="4" maxlength="10" placeholder="First name" required><br>
+            <label for="lastname">Last Name (4 to 10 characters):</label><br>
+            <input type="text" id="lastname" name="lastname" minlength="4" maxlength="10"placeholder="Last name" required><br><br>
+          </div>
+
+          <div>
+            <label for="email">Enter your email:</label><br>
+            <input type="email" id="email" name="email" placeholder="anexample@example.com" required><br><br>
+          </div>
+          
+          <div>
+            <label for="phone">Enter your phone number:</label>
+            <input type="tel" id="phone" name="phone"
+                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                  required>
+            <small>Format: 123-456-7890</small>
+            <br><br>
+          </div>
+
+          <div>
+            <table id="table">
+              <tr>
+                <!-- Enter Username-->
+                <td>Username:</td>
+                <td><input type ="text" name = "username"></td>
+              </tr>
+              <tr>
+                <!-- Enter Password.-->
+                <td>Password:</td>
+                <td><input type = "password" name = "password1"></td>
+              </tr>
+              <tr>
+                <!-- To Confirm Password.-->
+                <td>Confirm Password:</td>
+                <td><input type = "password" name = "password2"></td>
+              </tr>
+            </table><br><br>
+            
+          </dir>
+          <div>
+            <label for="comments">Comments</label><br>
+            <textarea id="comments" name="comments" rows="5" cols="50" placeholder="Enter a Comments:">
+            </textarea><br><br>
+          </div>
+          <div>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+          </div>
+        </form>      
+      </main>
+      
+      <footer class="box footer">
+        <br>
+        <p>Roshin Roychan | roychan_roshin@columbussate.edu | 706-302-0793</p>
+        <br>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

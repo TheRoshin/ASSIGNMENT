@@ -1,5 +1,16 @@
 body{
-  background-color: wheat
+  background-color: black;
+}
+
+a:link{
+  text-decoration: none;
+}
+a:hover{
+  color: red;
+}
+nav li:hover{
+  background-color: white;
+  text-align: center;
 }
 
 footer{
@@ -16,15 +27,15 @@ nav{
   border-radius: 25px;
   border: hidden;
   padding: 20px;
-  width: 100px;
-  height: 150px;
+  width: 150px;
+  height: auto;
   background-color: rgb(191,239,255);
   font-size: 20px;
 }
 
 ul{
-  margin: 0;
-  padding: 0;
+  padding-inline-start: 10px;
+  padding-inline-end: 10px;
 }
 
 .li{
@@ -49,21 +60,14 @@ p{
   font-size: 20px;
 }
 
-#img1, #img2{
-  border-width: 0px;
-  margin: 0px;
-  padding: 0px;
-  width: 80%;
-  height: 60%;
+#img1{
+  margin-left: auto;
+  margin-right: auto;
+  width: 85%;
+  height: 75%;
 }
 
-#img3{
-  border-width: 0px;
-  margin: 0px;
-  padding: 0px;
-  width: 35%;
-  height: 5%;
-}
+
 
 table, tr, th{
   text-align: left;
@@ -78,4 +82,93 @@ th, td{
 
 tr:nth-child(odd){
   background-color: lightgray;
+}
+
+
+.table{
+  border: 1;
+  align-content: "center";
+}
+
+textarea {
+    font-size: .8rem;
+    letter-spacing: 1px;
+    padding: 10px;
+    max-width: 100%;
+    line-height: 1.5;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px #999;
+}
+
+
+/*Defing the gird and styling the gird area
+*/
+.header{
+  grid-area: header;
+}
+.nav{
+  grid-area: nav;
+}
+.main{
+  grid-area: main;
+}
+.footer{
+  grid-area: footer;
+  text-align: center;
+}
+.grid {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: 15% 85%;
+  grid-template-areas: 
+  "header header" 
+  "nav main"
+  "footer footer";
+  background-color: rgb(0,0,0);
+  color: #444;
+}
+.grid > div{
+  text-align: center;
+  padding: 20px 0;
+  font-size: 20px;
+}
+.box {
+  background-color: rgb(229, 229, 229);
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 1.5em;
+}
+
+/*defing the what display look like
+*/
+header, nav, main, footer, section{
+  display: block;
+}
+
+
+/* responsive design for mobile */
+@media screen and (max-width: 600px){
+  body {
+    background-color: #ad9f61;
+  }
+
+  .grid {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 15% 85%;
+    grid-template-areas: 
+    "header header" 
+    "nav nav"
+    "main main"
+    "footer footer";
+     background-color: #ad9f61;
+    color: #444;
+  }
+  #img1{
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    height: 50%;
+  }
 }
