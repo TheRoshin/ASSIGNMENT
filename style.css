@@ -1,20 +1,5 @@
-* {
-  box-sizing: border-box;
-}
-
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
 body{
-  background-color:wheat;
-}
-
-[class*="col-"] {
-  float: left;
-  padding: 15px;
+  background-color: black;
 }
 
 a:link{
@@ -25,7 +10,7 @@ a:hover{
 }
 nav li:hover{
   background-color: white;
-  
+  text-align: center;
 }
 
 footer{
@@ -117,79 +102,77 @@ textarea {
 }
 
 
-/* For mobile phones: */
-[class*="col-"] {
-  width: 100%;
+/*Defing the gird and styling the gird area
+*/
+.header{
+  grid-area: header;
+}
+.nav{
+  grid-area: nav;
+}
+.main{
+  grid-area: main;
+}
+.aside{
+  grid-area: aside;
+}
+.footer{
+  grid-area: footer;
+  text-align: center;
+}
+.grid {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: 15% 85%;
+  grid-template-areas: 
+  "header header header" 
+  "nav main aside"
+  "footer footer footer";
+  background-color: rgb(0,0,0);
+  color: #444;
+}
+.grid > div{
+  text-align: center;
+  padding: 20px 0;
+  font-size: 20px;
+}
+.box {
+  background-color: rgb(229, 229, 229);
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 1.5em;
 }
 
+/*defing the what display look like
+*/
+header, nav, main, aside, footer{
+  display: block;
+}
 
 
 /* responsive design for mobile */
 @media screen and (max-width: 600px){
-    /* For tablets: */
-    .col-s-1 {width: 8.33%;}
-    .col-s-2 {width: 16.66%;}
-    .col-s-3 {width: 25%;}
-    .col-s-4 {width: 33.33%;}
-    .col-s-5 {width: 41.66%;}
-    .col-s-6 {width: 50%;}
-    .col-s-7 {width: 58.33%;}
-    .col-s-8 {width: 66.66%;}
-    .col-s-9 {width: 75%;}
-    .col-s-10 {width: 83.33%;}
-    .col-s-11 {width: 91.66%;}
-    .col-s-12 {width: 100%;}
-  
+  body {
+    background-color: #ad9f61;
+  }
+
+  .grid {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 15% 85%;
+    grid-template-areas: 
+    "header header" 
+    "nav nav"
+    "main main"
+    "aside aside"
+    "footer footer";
+     background-color: #ad9f61;
+    color: #444;
+  }
   #img1{
     margin-left: auto;
     margin-right: auto;
     width: 70%;
     height: 50%;
   }
-  /*styling for the nav section*/
-  nav ul{
-    list-style: none;
-    text-align: center;
-  }
-  nav li{
-    display: inline-block;
-    margin-right: 30px;
-    transition: all .10s ease;
-    color: #fff;
-    border: 3px solid white;
-    font-family:'Montserrat', sans-serif;
-    text-transform: uppercase;
-    text-align: center;
-    line-height: 1;
-    font-size: 17px;
-    background-color : transparent;
-    padding: 10px;
-    outline: none;
-    border-radius: 4px;
-  }
-
-  nav li a:link{
-    text-decoration: none;
-  }
-
-  nav li:hover{
-    color: #001F3F;
-    background-color: #fff;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  /* For desktop: */
-  .col-1 {width: 8.33%;}
-  .col-2 {width: 16.66%;}
-  .col-3 {width: 25%;}
-  .col-4 {width: 33.33%;}
-  .col-5 {width: 41.66%;}
-  .col-6 {width: 50%;}
-  .col-7 {width: 58.33%;}
-  .col-8 {width: 66.66%;}
-  .col-9 {width: 75%;}
-  .col-10 {width: 83.33%;}
-  .col-11 {width: 91.66%;}
-  .col-12 {width: 100%;}
 }
