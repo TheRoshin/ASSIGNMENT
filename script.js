@@ -2,7 +2,7 @@
   {
     var re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,10}$/;
     return re.test(str);
-  }*/
+  }
 
 function checkPassword(form)
 {
@@ -35,9 +35,9 @@ function checkPassword(form)
     return false;
   }
   return true;
-}
+}*/
 
-/**function checkPassword(form) {
+function checkPassword(form) {
   password1 = form.password1.value;
   password2 = form.password2.value;
   // If password not entered
@@ -57,7 +57,7 @@ function checkPassword(form)
     alert ("\nPassword did not match: Please try again...")
     return false;
   }
-}*/
+}
 
 function testing(){
   console.log("it is working!!\n\ntesting");
