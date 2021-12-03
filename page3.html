@@ -8,76 +8,81 @@
   </head>
   
   <body>
-    <div class="grid">
-      <header class="box header">
+    <div>
+      <header>
         <h1>Assignment 2</h1>
       </header>
       
-      <nav class="box nav">
-        <ul>
-          <li class="li"><a href="index.html" title="Home">Home</a></li>
-          <li class="li"><a href="page1.html" title="Page 1">Page 1</a></li>
-          <li class="li"><a href="page2.html" title="Page 2">Page 2</a></li>
-          <li class="li"><a href="page3.html" title="Page 3">Page 3</a></li>
-          <li class="li"><a href="https://www.columbusstate.edu/" title="Columbus State University">CSU</a></li>
-        </ul>
-      </nav>
-      
-      <main class="box main">
-        <p>Please fill out the following form.</P><br>
-        <form action="https://webdevbasics.net/scripts/yoga.php" method="POST" onsubmit="return checkPassword(this)">
-          <div>
-            <label for="firstname">First Name (4 to 10 characters):</label><br>
-            <input type="text" id="firstname" name="firstname" minlength="4" maxlength="10" placeholder="First name" required><br>
-            <label for="lastname">Last Name (4 to 10 characters):</label><br>
-            <input type="text" id="lastname" name="lastname" minlength="4" maxlength="10"placeholder="Last name" required><br><br>
-          </div>
+      <div class="row">
+        <nav class="col-3 col-s-3">
+          <ul>
+            <li class="li"><a href="index.html" title="Home">Home</a></li>
+            <li class="li"><a href="page1.html" title="Page 1">Page 1</a></li>
+            <li class="li"><a href="page2.html" title="Page 2">Page 2</a></li>
+            <li class="li"><a href="page3.html" title="Page 3">Page 3</a></li>
+            <li class="li"><a href="https://www.columbusstate.edu/" title="Columbus State University">CSU</a></li>
+          </ul>
+        </nav>
+        
+        <main class="col-6 col-s-9">
+          <p>Please fill out the following form.</P><br>
+          <form action="https://webdevbasics.net/scripts/yoga.php" method="POST" onsubmit="return checkPassword(this)">
+            <div>
+              <label for="firstname">First Name:</label><br>
+              <input type="text" id="firstname" name="firstname" minlength="4" maxlength="10" placeholder="First name" title="4 to 10 characters" required><br>
+              <label for="lastname">Last Name:</label><br>
+              <input type="text" id="lastname" name="lastname" minlength="4" maxlength="10"placeholder="Last name" title="4 to 10 characters" required><br><br>
+            </div>
 
-          <div>
-            <label for="email">Enter your email:</label><br>
-            <input type="email" id="email" name="email" placeholder="anexample@example.com" required><br><br>
-          </div>
-          
-          <div>
-            <label for="phone">Enter your phone number:</label>
-            <input type="tel" id="phone" name="phone"
-                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                  required>
-            <small>Format: 123-456-7890</small>
-            <br><br>
-          </div>
-
-          <div>
-            <table id="table">
-              <tr>
-                <!-- Enter Username-->
-                <td>Username:</td>
-                <td><input type ="text" name = "username"></td>
-              </tr>
-              <tr>
-                <!-- Enter Password.-->
-                <td>Password:</td>
-                <td><input type = "password" name = "password1"></td>
-              </tr>
-              <tr>
-                <!-- To Confirm Password.-->
-                <td>Confirm Password:</td>
-                <td><input type = "password" name = "password2"></td>
-              </tr>
-            </table><br><br>
+            <div>
+              <label for="email">Enter your email:</label><br>
+              <input type="email" id="email" name="email" placeholder="anexample@example.com" required><br><br>
+            </div>
             
-          </dir>
-          <div>
-            <label for="comments">Comments</label><br>
-            <textarea id="comments" name="comments" rows="5" cols="50" placeholder="Enter a Comments:">
-            </textarea><br><br>
-          </div>
-          <div>
-            <input type="submit" value="Submit">
-            <input type="reset" value="Reset">
-          </div>
-        </form>      
-      </main>
+            <div>
+              <label for="phone">Enter your phone number:</label>
+              <input type="tel" id="phone" name="phone" placeholder="123-456-7890"
+                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                    required>
+              <small>Format: 123-456-7890</small>
+              <br><br>
+            </div>
+
+            <div>
+              <table id="table">
+                <tr>
+                  <!-- Enter Username-->
+                  <td>Username:</td>
+                  <td><input type ="text" name = "username"></td>
+                </tr>
+                <tr>
+                  <!-- Enter Password.-->
+                  <td>Password:</td>
+                  <td><input type = "password" name = "password1" pattern="[A-Za-z]{8}" title="At least 8 letter characters"></td>
+                </tr>
+                <tr>
+                  <!-- To Confirm Password.-->
+                  <td>Confirm Password:</td>
+                  <td><input type = "password" name = "password2"></td>
+                </tr>
+              </table><br><br>
+              
+            </dir>
+            <div>
+              <label for="comments">Comments</label><br>
+              <textarea id="comments" name="comments" rows="5" cols="50" placeholder="Enter a Comments:">
+              </textarea><br><br>
+            </div>
+            <div>
+              <input type="submit" value="Submit">
+              <input type="reset" value="Reset">
+            </div>
+          </form>      
+        </main>
+        <div class="col- col-s-12">
+          <p>Add page 3 to your site. Update the nav on each page. Page 3 will have a form and JavaScript form validation. You can repurpose the form you created in a previous exercise. Please review the feedback you received for the form and fix whatever was criticized. You should have at minimum: first and last name, email, username, password, reenter password, and comment text box. You will add a phone number field to this.</p>
+        </div>
+      </div>
       
       <footer class="box footer">
         <br>
